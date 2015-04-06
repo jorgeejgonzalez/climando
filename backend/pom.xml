@@ -34,8 +34,8 @@
  
  <properties>
    <!-- maven-compiler-plugin -->
-   <maven.compiler.target>1.7</maven.compiler.target>
-   <maven.compiler.source>1.7</maven.compiler.source>
+   <maven.compiler.target>1.8</maven.compiler.target>
+   <maven.compiler.source>1.8</maven.compiler.source>
    
    <!-- Arquillian REST Client -->
    <version.arquillian.resteasy.client>1.0.0.Alpha3</version.arquillian.resteasy.client>
@@ -75,6 +75,12 @@
  </dependencyManagement>
  
  <dependencies>
+ 
+  <dependency>
+    <groupId>com.idisoft.climando</groupId>
+    <artifactId>model</artifactId>
+    <version>${version.climando}</version>
+  </dependency>
  
   
   <!-- Import the CDI API, we use provided scope as the API is included in JBoss WildFly -->
@@ -163,6 +169,12 @@
     <artifactId>hibernate-validator-annotation-processor</artifactId>
     <scope>provided</scope>
   </dependency>
+  
+  <dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>${version.apache.commons}</version>
+  </dependency>
 
   <!-- Needed for running tests (you may also use TestNG) -->
   <dependency>
@@ -239,14 +251,7 @@
     <artifactId>cukespace-core</artifactId>
     <version>${version.cukespace}</version>
     <scope>test</scope>
-  </dependency>
-
-
-  <dependency>
-  	<groupId>com.idisoft.climando</groupId>
-  	<artifactId>model</artifactId>
-  	<version>${version.climando}</version>
-  </dependency>
+  </dependency>  
  </dependencies>
  
  <build>
@@ -357,4 +362,5 @@
 
     </profiles>
 	<groupId>com.idisoft.climando</groupId>
+	
 </project>

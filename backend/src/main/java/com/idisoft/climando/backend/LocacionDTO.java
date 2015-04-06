@@ -28,5 +28,15 @@ public class LocacionDTO implements Locacion {
 	public String getPais() {
 		return pais;
 	}
+	
+	@Override
+	public boolean equals(Object o){
+		boolean check = false;
+		if(o instanceof Locacion){
+			Locacion comparar = (Locacion) o;
+			check = ciudad.equals(comparar.getCiudad()) && estado.equals(comparar.getEstado()) && pais.equals(comparar.getPais());
+		}		
+		return check;
+	}
 
 }

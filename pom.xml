@@ -12,12 +12,12 @@
   </description>
   <modules>
   	<module>model</module>
+  	<module>backend</module>
   </modules>
 
   <scm>
-    <connection>scm:git:https://github.com/jorgeejgonzalez/restos.git</connection>
-    <developerConnection>scm:git:https://github.com/jorgeejgonzalez/restos.git</developerConnection>
-    <url>https://github.com/jorgeejgonzalez/restos</url>
+    <connection>scm:git:https://github.com/jorgeejgonzalez/climando.git</connection>
+    <url>https://github.com/jorgeejgonzalez/climando</url>
     <tag>HEAD</tag>
   </scm>
   
@@ -46,14 +46,16 @@
     <version.war.plugin>2.1.1</version.war.plugin>
     
     <!-- maven-compiler-plugin -->
-    <maven.compiler.target>1.7</maven.compiler.target>
-    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
     
     
     <!-- resteasy version -->
     <version.resteasy>3.0.6.Final</version.resteasy>
 
     <version.mockito>2.0.3-beta</version.mockito>
+    
+    <version.apache.commons>3.4</version.apache.commons>
   </properties>
   
   <profiles>
