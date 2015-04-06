@@ -1,4 +1,4 @@
-package com.idisoft.climando;
+package com.idisoft.climando.backend;
 
 import com.idisoft.climando.model.Imagen;
 
