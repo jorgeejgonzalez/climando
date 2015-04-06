@@ -22,12 +22,12 @@
  <modelVersion>4.0.0</modelVersion> 
 
  <parent>
-  <groupId>org.idisoft</groupId>
+  <groupId>com.idisoft</groupId>
   <artifactId>climando</artifactId>
   <version>0.0.1-SNAPSHOT</version>
  </parent>
  
- <artifactId>climando-backend</artifactId>
+ <artifactId>backend</artifactId>
  <packaging>war</packaging>
  <name>Climando App Backend</name>
  <description>Climando App Backend</description>
@@ -76,11 +76,6 @@
  
  <dependencies>
  
-  <dependency>
-   <groupId>org.idisoft</groupId>
-   <artifactId>climando-model</artifactId>
-   <version>${version.climando}</version>
-  </dependency>
   
   <!-- Import the CDI API, we use provided scope as the API is included in JBoss WildFly -->
   <dependency>
@@ -246,7 +241,12 @@
     <scope>test</scope>
   </dependency>
 
-  
+
+  <dependency>
+  	<groupId>com.idisoft.climando</groupId>
+  	<artifactId>model</artifactId>
+  	<version>${version.climando}</version>
+  </dependency>
  </dependencies>
  
  <build>
@@ -326,7 +326,7 @@
                 <dependency>
                     <groupId>org.wildfly</groupId>
                     <artifactId>wildfly-arquillian-container-remote</artifactId>
-                    <version>${version.arquillian.container}</version>
+                    <!-- <version>${version.arquillian.container}</version> -->
                     <scope>test</scope>
                 </dependency>
             </dependencies>
@@ -356,4 +356,5 @@
         </profile>
 
     </profiles>
+	<groupId>com.idisoft.climando</groupId>
 </project>
