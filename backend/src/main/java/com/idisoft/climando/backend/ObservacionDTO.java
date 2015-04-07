@@ -1,10 +1,15 @@
 package com.idisoft.climando.backend;
 
+import org.apache.commons.lang.builder.HashCodeBuilder;
+
 import com.idisoft.climando.model.Imagen;
 import com.idisoft.climando.model.Locacion;
 import com.idisoft.climando.model.Observacion;
 
 public class ObservacionDTO implements Observacion {
+	
+	private static final int HASH_PRIME_MIN = 229;
+	private static final int HASH_PRIME_MAX = 349;
 	
 	Locacion locacion;
 	Imagen imagenPrincipal;
@@ -58,6 +63,28 @@ public class ObservacionDTO implements Observacion {
 	@Override
 	public String getFecha() {
 		return fecha;
+	}
+	
+	@Override
+	public boolean equals(Object o){
+		if(o instanceof Observacion){
+			Observacion comparar = (Observacion) o;
+			return locacion.equals(comparar.getLocacion()) && fecha.equals(comparar.getFecha());
+		}
+		return false;
+	}
+	
+	@Override
+	public int hashCode(){
+		return new HashCodeBuilder(HASH_PRIME_MIN, HASH_PRIME_MAX)
+				.append(locacion)
+				.append(imagenPrincipal)
+				.append(icono)
+				.append(temperatura)
+				.append(humedad)
+				.append(sensacionTermica)
+				.append(fecha)
+				.toHashCode();
 	}
 
 }

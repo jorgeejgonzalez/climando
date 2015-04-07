@@ -1,4 +1,4 @@
-package com.idisoft.climando.backend.unit.LocacionDTO;
+package com.idisoft.climando.unit.backend.LocacionDTO;
 
 import static org.junit.Assert.*;
 
